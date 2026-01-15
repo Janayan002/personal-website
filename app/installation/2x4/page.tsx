@@ -67,7 +67,7 @@ export default function Home() {
 
 
              <div className="mt-12 ml-32 h-full">
-                <h1 className="text-3xl font-bold">2x4x5' 4</h1>
+                <h1 className="text-3xl font-bold">{"2x4x5' 4"}</h1>
 
                 <div className="flex flex gap-10 mt-8">
                     <div className="">
