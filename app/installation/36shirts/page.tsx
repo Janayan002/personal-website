@@ -33,17 +33,17 @@ export default function Home() {
                             className={`absolute left-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg rounded-md transition-all duration-150 ${isDropdownOpen ? "opacity-100 visible" : "opacity-0 invisible"
                                 }`}
                         >
+                             <Link
+                                href="/installation"
+                                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                            >
+                                Installation
+                            </Link>
                             <Link
                                 href="/painting"
                                 className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
                             >
                                 Painting
-                            </Link>
-                            <Link
-                                href="/installation"
-                                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                            >
-                                Installation
                             </Link>
                             <Link
                                 href="/digital"
@@ -73,7 +73,7 @@ export default function Home() {
                     <div className="">
                         <Image
                             aria-hidden
-                            src="/2x4cover.jpeg"
+                            src="/36shirts.jpeg"
                             alt="meow"
                             width={800}
                             height={800}
@@ -88,16 +88,14 @@ export default function Home() {
                         <p>09/12/2025</p>
                     </div>
 
-                    <div className="text-sm text-gray-800 leading-relaxed">
-                        <p>This project...</p>
-                        <br></br>
-                    </div>
+                
+                  
                 </div>
 
                 <div className="mt-8">
                         <Image
                             aria-hidden
-                            src="/36shirts.jpeg"
+                            src="/36s1.jpeg"
                             alt="meow"
                             width={800}
                             height={800}
@@ -107,7 +105,38 @@ export default function Home() {
                 <div className="mt-8">
                         <Image
                             aria-hidden
-                            src="/2x4photo3.jpeg"
+                            src="/36s2.jpeg"
+                            alt="meow"
+                            width={800}
+                            height={800}
+                        />
+                    </div>
+
+                <div className="mt-8">
+                        <Image
+                            aria-hidden
+                            src="/36s3.jpeg"
+                            alt="meow"
+                            width={800}
+                            height={800}
+                        />
+                    </div>
+
+                    <div className="mt-8">
+                        <Image
+                            aria-hidden
+                            src="/36s4.jpeg"
+                            alt="meow"
+                            width={800}
+                            height={800}
+                        />
+                    </div>
+
+
+                     <div className="mt-8">
+                        <Image
+                            aria-hidden
+                            src="/36s5.jpeg"
                             alt="meow"
                             width={800}
                             height={800}

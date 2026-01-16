@@ -72,6 +72,12 @@ const installationImages: ImageCardProps[] = [
     title: "36 Shirts",
     href: "/installation/36shirts",
   },
+  {
+    src: "/brick1.jpeg",
+    alt: "bricks",
+    title: "Brick Monument",
+    href: "/installation/brick",
+  },
 ];
 
 // --- 4. INSTALLATION PAGE ---
@@ -101,17 +107,17 @@ export default function Installation() {
                 isDropdownOpen ? "opacity-100 visible" : "opacity-0 invisible"
               }`}
             >
+               <Link
+                                href="/installation"
+                                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                            >
+                                Installation
+                            </Link>
               <Link
                 href="/painting"
                 className="block px-4 py-2 hover:bg-gray-100"
               >
                 Painting
-              </Link>
-              <Link
-                href="/installation"
-                className="block px-4 py-2 hover:bg-gray-100"
-              >
-                Installation
               </Link>
               <Link
                 href="/digital"
