@@ -48,9 +48,11 @@ const installationImages = [
   { src: "/br1.jpeg", alt: "Sleeping Space #1", title: "Sleeping Space #1" },
   { src: "/br2.jpeg", alt: "Sleeping Space #2", title: "Sleeping Space #2" },
   { src: "/br3.jpeg", alt: "Sleeping Space #3", title: "Sleeping Space #3" },
+  { src: "/bike1.jpeg", alt: "When on bike", title: "When on my Bike" },
   { src: "/keepsake.jpg", alt: "Keepsake", title: "Keepsake" },
   { src: "/bathroom.jpg", alt: "Messy Counter", title: "Messy Counter" },
-  { src: "/forestpark.jpg", alt: "Forest Park", title: "Trees at Forest Park" },
+  { src: "/forestpark.jpg", alt: "Forest Park", title: "Trees at Forest Park", href: "/painting/onbike"},
+
 
 ];
 
