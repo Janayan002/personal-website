@@ -1,76 +1,102 @@
 "use client";
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-
+import RippleNoise from "./components/RippleNoise";
 
 export default function Home() {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   return (
-    <div className="font-sans min-h-screen p-8 pb-20 sm:p-20 pt-32">
+    <div className="font-sans min-h-screen p-8 pb-20 sm:p-20 pt-32 relative">
+      <RippleNoise />
 
-
-      <header className="fixed top-0 left-0 w-full z-50 bg-white px-8 py-4 sm:px-20 flex justify-between items-center">
-      <h1 className="text-xl font-bold">
-       Jana Yan
+      <h1
+        className="fixed top-6 left-8 sm:left-20 z-50 text-3xl font-semibold"
+        style={{
+          fontFamily: "Garamond, serif",
+          backgroundImage:
+            "radial-gradient(circle, #374151 1px, transparent 1.5px)",
+          backgroundSize: "3px 3px",
+          WebkitBackgroundClip: "text",
+          backgroundClip: "text",
+          color: "transparent",
+        }}
+      >
+        Jana Yan
       </h1>
-  
 
-      <nav className="flex gap-8 text-gray-700 text-base sm:text-lg font-medium">
-          <div
-            className="relative"
-            onMouseEnter={() => setIsDropdownOpen(true)}
-            onMouseLeave={() => setIsDropdownOpen(false)}
-          >
-            <button className="hover:underline hover:underline-offset-4">
-              Work
-            </button>
+      <a
+        href="/about"
+        className="fixed top-6 right-8 sm:right-20 z-50 text-lg text-gray-600 hover:text-gray-900"
+        style={{ fontFamily: "Garamond, serif" }}
+      >
+        About
+      </a>
 
-            {/* Dropdown box */}
-            <div
-              className={`absolute left-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg rounded-md transition-all duration-150 ${
-                isDropdownOpen ? "opacity-100 visible" : "opacity-0 invisible"
-              }`}
-            >
-               <Link
-                                href="/installation"
-                                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                            >
-                                Installation
-                            </Link>
-              <Link
-                href="/painting"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-              >
-                Painting
-              </Link>
-              <Link
-                href="/digital"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-              >
-                Design Works
-              </Link>
-            </div>
-          </div>
-
-          <a href="/about" className="hover:underline hover:underline-offset-4">
-            About
-          </a>
-        </nav>
-        </header>
-      
-      
-        <main className="flex items-center justify-center row-start-2">
+      <main className="relative z-10">
+        <Link
+          href="/installation"
+          className="absolute block"
+          style={{ top: "23vh", left: "13vw", width: "220px" }}
+        >
           <Image
-            aria-hidden
-            src="/photo1.jpg"
-            alt="meow"
-            width={500}
-          height={500}
+            src="/closet design 1.png"
+            alt="Closet Design"
+            width={220}
+            height={220}
+            className="w-full h-auto"
           />
-        </main>
-        
+          <p
+            className="mt-2 text-base"
+            style={{ fontFamily: "Garamond, serif" }}
+          >
+            <span className="text-blue-700 underline">Hardware</span>{" "}
+            <span className="italic text-gray-500">(3d installations)</span>
+          </p>
+        </Link>
+
+        <Link
+          href="/painting"
+          className="absolute block"
+          style={{ top: "10vh", right: "13vw", width: "220px" }}
+        >
+          <Image
+            src="/painting1.jpg"
+            alt="Painting"
+            width={220}
+            height={220}
+            className="w-full h-auto"
+          />
+          <p
+            className="mt-2 text-base"
+            style={{ fontFamily: "Garamond, serif" }}
+          >
+            <span className="text-blue-700 underline">Software</span>{" "}
+            <span className="italic text-gray-500">(works on canvas)</span>
+          </p>
+        </Link>
+
+        <Link
+          href="/digital"
+          className="absolute block"
+          style={{ top: "45vh", left: "60%", transform: "translateX(-50%)", width: "180px" }}
+        >
+          <Image
+            src="/poster1.jpg"
+            alt="Poster"
+            width={200}
+            height={200}
+            className="w-full h-auto"
+          />
+
+          <p
+            className="mt-2 text-base"
+            style={{ fontFamily: "Garamond, serif" }}
+          >
+            <span className="text-blue-700 underline">Frontend</span>{" "}
+            <span className="italic text-gray-500">(digital designs)</span>
+          </p>
+
+        </Link>
+      </main>
     </div>
   );
 }
