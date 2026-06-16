@@ -9,7 +9,7 @@ export default function Home() {
       <RippleNoise />
 
       <h1
-        className="fixed top-6 left-8 sm:left-20 z-50 text-3xl font-semibold"
+        className="fixed top-6 left-8 sm:left-20 z-50 text-xl font-semibold"
         style={{
           fontFamily: "Garamond, serif",
           backgroundImage:
@@ -20,15 +20,23 @@ export default function Home() {
           color: "transparent",
         }}
       >
-        Jana Yan
+        jana yan
       </h1>
 
       <a
         href="/about"
-        className="fixed top-6 right-8 sm:right-20 z-50 text-lg text-gray-600 hover:text-gray-900"
-        style={{ fontFamily: "Garamond, serif" }}
+        className="fixed top-6 right-8 sm:right-20 z-50 text-xl font-semibold"
+        style={{
+          fontFamily: "Garamond, serif",
+          backgroundImage:
+            "radial-gradient(circle, #374151 1px, transparent 1.5px)",
+          backgroundSize: "3px 3px",
+          WebkitBackgroundClip: "text",
+          backgroundClip: "text",
+          color: "transparent",
+        }}
       >
-        About
+        about
       </a>
 
       <main className="relative z-10">
