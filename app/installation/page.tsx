@@ -27,7 +27,7 @@ const ImageCard: React.FC<ImageCardProps> = ({ src, alt, title, href }) => {
 
   const content = (
     <div
-      className="relative w-full cursor-pointer group break-inside-avoid mb-8"
+      className="relative inline-block w-full cursor-pointer group break-inside-avoid mb-8"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -35,7 +35,7 @@ const ImageCard: React.FC<ImageCardProps> = ({ src, alt, title, href }) => {
       <img
         src={src}
         alt={alt}
-        className={`w-full h-auto transition-all duration-300 ease-in-out ${
+        className={`block w-full h-auto transition-all duration-300 ease-in-out ${
           isHovered ? "blur-sm scale-[1.02]" : "blur-0 scale-100"
         }`}
       />
@@ -58,6 +58,12 @@ const ImageCard: React.FC<ImageCardProps> = ({ src, alt, title, href }) => {
 
 // --- 3. IMAGE DATA ---
 const installationImages: ImageCardProps[] = [
+  {
+    src: "/remainingbody.jpg",
+    alt: "Remaining",
+    title: "Remaining",
+    href: "/installation/remaining",
+  },
   {
     src: "/2x4cover.jpeg",
     alt: "Wooden Installation",
@@ -89,10 +95,10 @@ const installationImages: ImageCardProps[] = [
     href: "/installation/brick",
   },
   {
-    src: "/remaining1.jpeg",
-    alt: "Remaining",
-    title: "Remaining",
-    href: "/installation/remaining",
+    src: "/kichen knives/IMG_2700.jpg",
+    alt: "Kitchen Knives",
+    title: "Kitchen Knives",
+    href: "/installation/kitchenknives",
   },
 ];
 

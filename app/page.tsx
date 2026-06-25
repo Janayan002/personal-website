@@ -1,7 +1,7 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import RippleNoise from "./components/RippleNoise";
+import DissolveImage from "./components/DissolveImage";
 
 export default function Home() {
   return (
@@ -45,7 +45,7 @@ export default function Home() {
           className="absolute block"
           style={{ top: "23vh", left: "13vw", width: "220px" }}
         >
-          <Image
+          <DissolveImage
             src="/closet design 1.png"
             alt="Closet Design"
             width={220}
@@ -56,8 +56,8 @@ export default function Home() {
             className="mt-2 text-base"
             style={{ fontFamily: "Garamond, serif" }}
           >
-            <span className="text-blue-700 underline">Hardware</span>{" "}
-            <span className="italic text-gray-500">(3d installations)</span>
+            <span className="text-blue-700 underline">Installations</span>{" "}
+            
           </p>
         </Link>
 
@@ -66,7 +66,7 @@ export default function Home() {
           className="absolute block"
           style={{ top: "10vh", right: "13vw", width: "220px" }}
         >
-          <Image
+          <DissolveImage
             src="/painting1.jpg"
             alt="Painting"
             width={220}
@@ -77,8 +77,8 @@ export default function Home() {
             className="mt-2 text-base"
             style={{ fontFamily: "Garamond, serif" }}
           >
-            <span className="text-blue-700 underline">Software</span>{" "}
-            <span className="italic text-gray-500">(works on canvas)</span>
+            <span className="text-blue-700 underline">Works on Canvas</span>{" "}
+            
           </p>
         </Link>
 
@@ -87,7 +87,7 @@ export default function Home() {
           className="absolute block"
           style={{ top: "45vh", left: "60%", transform: "translateX(-50%)", width: "180px" }}
         >
-          <Image
+          <DissolveImage
             src="/poster1.jpg"
             alt="Poster"
             width={200}
@@ -99,8 +99,7 @@ export default function Home() {
             className="mt-2 text-base"
             style={{ fontFamily: "Garamond, serif" }}
           >
-            <span className="text-blue-700 underline">Frontend</span>{" "}
-            <span className="italic text-gray-500">(digital designs)</span>
+            <span className="text-blue-700 underline">Digital Designs</span>{" "}
           </p>
 
         </Link>

@@ -12,8 +12,8 @@ export default function Home() {
             <header className="fixed top-0 left-0 w-full z-50 bg-white px-8 py-4 sm:px-20 flex justify-between items-center">
 
             <Link href="/">
-                <h1 className="text-xl font-bold cursor-pointer">
-                    Jana Yan
+                <h1 className="text-xl font-semibold cursor-pointer" style={{ fontFamily: "Garamond, serif", backgroundImage: "radial-gradient(circle, #374151 1px, transparent 1.5px)", backgroundSize: "3px 3px", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>
+                    jana yan
                 </h1>
             </Link>
 
@@ -54,8 +54,8 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <a href="/about" className="hover:underline hover:underline-offset-4">
-                        About
+                    <a href="/about" style={{ fontFamily: "Garamond, serif", backgroundImage: "radial-gradient(circle, #374151 1px, transparent 1.5px)", backgroundSize: "3px 3px", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>
+                        about
                     </a>
                 </nav>
             </header>
@@ -73,7 +73,7 @@ export default function Home() {
                     <div className="">
                         <Image
                             aria-hidden
-                            src="/remaining1.jpeg"
+                            src="/remainingbody.jpg"
                             alt="Remaining"
                             width={800}
                             height={800}
@@ -87,6 +87,16 @@ export default function Home() {
                         <br></br>
                         <p>2026</p>
                     </div>
+                </div>
+
+                <div className="mt-8">
+                        <Image
+                            aria-hidden
+                            src="/remaining1.jpeg"
+                            alt="Remaining"
+                            width={800}
+                            height={800}
+                        />
                 </div>
 
                 <div className="mt-8">
@@ -138,16 +148,6 @@ export default function Home() {
                             height={800}
                         />
                 </div>
-
-                <div className="mt-8">
-                        <Image
-                            aria-hidden
-                            src="/remainingbody.jpg"
-                            alt="Remaining"
-                            width={800}
-                            height={800}
-                        />
-                    </div>
 
 
             </div>
