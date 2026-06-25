@@ -88,6 +88,12 @@ const installationImages: ImageCardProps[] = [
     title: "Brick Monument",
     href: "/installation/brick",
   },
+  {
+    src: "/remaining1.jpeg",
+    alt: "Remaining",
+    title: "Remaining",
+    href: "/installation/remaining",
+  },
 ];
 
 // --- 4. INSTALLATION PAGE ---
