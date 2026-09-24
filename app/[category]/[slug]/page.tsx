@@ -57,6 +57,7 @@ export default async function WorkPage({ params }: Params) {
               src={work.video}
               controls
               playsInline
+              preload="metadata"
               className="mx-auto block h-auto w-auto max-w-full md:max-h-[85vh]"
             />
           </Reveal>

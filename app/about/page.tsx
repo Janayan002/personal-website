@@ -32,8 +32,8 @@ export default function About() {
 
         <Image
           src="/me.jpeg"
-          width={3966}
-          height={4256}
+          width={2236}
+          height={2400}
           alt="Portrait of Jana Yan"
           priority
           sizes="(min-width: 1024px) 22rem, 100vw"

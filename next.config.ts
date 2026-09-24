@@ -7,6 +7,8 @@ const nextConfig: NextConfig = {
     return [
       { source: "/digital", destination: "/design", permanent: true },
       { source: "/digital/:slug", destination: "/design/:slug", permanent: true },
+      // "Resume" was renamed to "CV".
+      { source: "/resume", destination: "/cv", permanent: true },
     ];
   },
   async rewrites() {

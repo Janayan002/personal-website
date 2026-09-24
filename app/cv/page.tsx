@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { categories, workHref, works } from "../lib/works";
 
-export const metadata: Metadata = { title: "Resume" };
+export const metadata: Metadata = { title: "CV" };
 
 type Entry = { year: string; text: string };
 
@@ -36,7 +36,7 @@ function EntryList({ title, entries }: { title: string; entries: Entry[] }) {
   );
 }
 
-export default function Resume() {
+export default function CV() {
   return (
     <div className="max-w-3xl space-y-10">
       <EntryList title="Education" entries={education} />

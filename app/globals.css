@@ -59,16 +59,6 @@ body {
   }
 }
 
-/* Name in the original site's style: Garamond filled with a fine dot pattern */
-.dotted-name {
-  font-family: Garamond, serif;
-  background-image: radial-gradient(circle, #374151 1px, transparent 1.5px);
-  background-size: 3px 3px;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
 /* Gentle fade-up as images scroll into view */
 .reveal {
   opacity: 0;
