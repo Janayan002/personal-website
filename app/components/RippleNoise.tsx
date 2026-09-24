@@ -129,7 +129,7 @@ export default function RippleNoise() {
         p.x += p.vx;
         p.y += p.vy;
 
-        const flicker = 0.35 + Math.random() * 0.45;
+        const flicker = 0.15 + Math.random() * 0.2;
         const size = Math.random() < 0.5 ? 1 : 1.5;
         ctx.fillStyle = `rgba(180, 180, 180, ${flicker})`;
         ctx.fillRect(p.x, p.y, size, size);
