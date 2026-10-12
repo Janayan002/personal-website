@@ -18,8 +18,12 @@ export type Work = {
   category: Category;
   year?: string;
   materials?: string;
+  // Artist statement shown under the materials line.
+  description?: string;
   images: Img[]; // first image is the cover
   video?: string;
+  // Show only the video on the project page; images are still used as the cover.
+  videoOnly?: boolean;
   // Order on the home page; omit to leave it off the home page.
   featured?: number;
   // Show the image at a reduced size on the home page.
@@ -29,12 +33,39 @@ export type Work = {
 export const works: Work[] = [
   // ---- Installation ----
   {
+    slug: "iheartmycomputer",
+    title: "I <3 My Computer",
+    category: "installation",
+    year: "2026",
+    materials: "Arduino, heartbeat sensor, wood, silicone, other electronics",
+    featured: 1,
+    description:
+      "My computer is my closest companion; it may know me better than anyone. It knows me by heart. This soft silicone screen asks for no typing or tapping, only your pulse. Put your finger on the sensor and each heartbeat lights one pixel, slowly drawing a heart within a heart. The piece makes visible the quiet trust we place in our devices: we hand them our softest, most involuntary selves, and they redisplay us, tenderly and in public.",
+    images: [
+      { src: "/heart computer/hc2.jpg", w: 1279, h: 1723 },
+      { src: "/heart computer/hc1.jpg", w: 1279, h: 1706 },
+      { src: "/heart computer/hc3.jpg", w: 960, h: 1282 },
+    ],
+    video: "/heart computer/hc.mp4",
+  },
+  {
+    slug: "streetrats",
+    title: "Street Rats Can Be Angels Too",
+    category: "installation",
+    year: "2026",
+    materials: "Wood, fabric, Arduino, servo motors",
+    featured: 0,
+    images: [{ src: "/streetratcover.jpg", w: 861, h: 1148 }],
+    video: "/streetrat.mp4",
+    videoOnly: true,
+  },
+  {
     slug: "remaining",
-    title: "Remaining",
+    title: "Her body was here before I found it",
     category: "installation",
     year: "2026",
     materials: "Metal, plaster, spray foam, fabric, wire, silicone",
-    featured: 3,
+    featured: 5,
     images: [
       { src: "/remainingbody.jpg", w: 1767, h: 2400 },
       { src: "/remaining1.jpeg", w: 2400, h: 1800 },
@@ -51,7 +82,7 @@ export const works: Work[] = [
     category: "installation",
     year: "2026",
     materials: "Steel",
-    featured: 5,
+    featured: 3,
     images: [{ src: "/kichen knives/IMG_2700.jpg", w: 933, h: 1501 }],
     video: "/kichen knives/IMG_1214.mp4",
   },
@@ -150,13 +181,21 @@ export const works: Work[] = [
   },
   {
     slug: "refraction",
-    title: "Refraction",
+    title: "Refraction #1",
+    category: "painting",
+    year: "2026",
+    materials: "Oil on canvas",
+    images: [{ src: "/refraction1.jpg", w: 1600, h: 1279 }],
+  },
+  {
+    slug: "refraction2",
+    title: "Refraction #2",
     category: "painting",
     featured: 2,
     small: true,
     year: "2026",
     materials: "Oil on canvas",
-    images: [{ src: "/refraction2.jpeg", w: 2011, h: 1590 }],
+    images: [{ src: "/refraction-2.jpg", w: 1600, h: 1280 }],
   },
   {
     slug: "onbike",
@@ -226,9 +265,14 @@ export const works: Work[] = [
   },
 ];
 
+// Newest year first; works from the same year (or without one) keep their
+// `featured` order, and undated works go last.
 export const featuredWorks = works
   .filter((w) => w.featured !== undefined)
-  .sort((a, b) => a.featured! - b.featured!);
+  .sort(
+    (a, b) =>
+      Number(b.year ?? 0) - Number(a.year ?? 0) || a.featured! - b.featured!,
+  );
 
 export const worksIn = (category: Category) =>
   works.filter((w) => w.category === category);

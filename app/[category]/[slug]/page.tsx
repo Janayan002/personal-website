@@ -33,24 +33,26 @@ export default async function WorkPage({ params }: Params) {
         <h1 className="text-base italic">{work.title}</h1>
         {work.year && <p className="text-muted">{work.year}</p>}
         {work.materials && <p className="text-muted">{work.materials}</p>}
+        {work.description && <p className="mt-4">{work.description}</p>}
       </header>
 
       <div className="flex flex-col gap-10 md:gap-16">
-        {work.images.map((img, i) => (
-          <Reveal key={img.src}>
-            <Image
-              src={img.src}
-              width={img.w}
-              height={img.h}
-              alt={`${work.title}, image ${i + 1}`}
-              priority={i === 0}
-              sizes="(min-width: 768px) calc(100vw - 280px), 100vw"
-              // Size from the aspect ratio so low-resolution photos match the others
-              style={{ "--ar": img.w / img.h } as React.CSSProperties}
-              className="mx-auto block h-auto w-full md:w-[min(100%,calc(85vh*var(--ar)))]"
-            />
-          </Reveal>
-        ))}
+        {!work.videoOnly &&
+          work.images.map((img, i) => (
+            <Reveal key={img.src}>
+              <Image
+                src={img.src}
+                width={img.w}
+                height={img.h}
+                alt={`${work.title}, image ${i + 1}`}
+                priority={i === 0}
+                sizes="(min-width: 768px) calc(100vw - 280px), 100vw"
+                // Size from the aspect ratio so low-resolution photos match the others
+                style={{ "--ar": img.w / img.h } as React.CSSProperties}
+                className="mx-auto block h-auto w-full md:w-[min(100%,calc(85vh*var(--ar)))]"
+              />
+            </Reveal>
+          ))}
         {work.video && (
           <Reveal>
             <video

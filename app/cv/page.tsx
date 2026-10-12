@@ -10,7 +10,10 @@ type Entry = { year: string; text: string };
 const education: Entry[] = [
   { year: "Current", text: "BFA, Studio Art — Washington University in St. Louis" },
 ];
-const exhibitions: Entry[] = [];
+const exhibitions: Entry[] = [
+  { year: "Aug 2026", text: "Turnover — group exhibition, Snowmass, Colorado" },
+  { year: "Apr 2026", text: "Preheat the Oven — group exhibition, St. Louis, Missouri" },
+];
 const awards: Entry[] = [];
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
