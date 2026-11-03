@@ -22,6 +22,8 @@ export type Work = {
   description?: string;
   images: Img[]; // first image is the cover
   video?: string;
+  // Extra videos, shown after `video`.
+  videos?: string[];
   // Show only the video on the project page; images are still used as the cover.
   videoOnly?: boolean;
   // Order on the home page; omit to leave it off the home page.
@@ -32,6 +34,24 @@ export type Work = {
 
 export const works: Work[] = [
   // ---- Installation ----
+  {
+    slug: "nowaterlikehome",
+    title: "There Is No Water Like That of Home",
+    category: "installation",
+    year: "2026",
+    featured: -1,
+    images: [
+      { src: "/satellite/sat1.jpg", w: 2400, h: 1600 },
+      { src: "/satellite/sat2.jpg", w: 2400, h: 1600 },
+      { src: "/satellite/sat3.jpg", w: 2400, h: 1600 },
+      { src: "/satellite/sat4.jpg", w: 2400, h: 1600 },
+      { src: "/satellite/sat5.jpg", w: 2400, h: 1600 },
+      { src: "/satellite/sat6.jpg", w: 2400, h: 1600 },
+      { src: "/satellite/sat7.jpg", w: 2400, h: 1600 },
+      { src: "/satellite/sat8.jpg", w: 2400, h: 1600 },
+    ],
+    videos: ["/satellite/sat-video1.mp4", "/satellite/sat-video2.mp4"],
+  },
   {
     slug: "iheartmycomputer",
     title: "I <3 My Computer",

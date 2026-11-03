@@ -53,17 +53,17 @@ export default async function WorkPage({ params }: Params) {
               />
             </Reveal>
           ))}
-        {work.video && (
-          <Reveal>
+        {[work.video, ...(work.videos ?? [])].filter(Boolean).map((src) => (
+          <Reveal key={src}>
             <video
-              src={work.video}
+              src={src}
               controls
               playsInline
               preload="metadata"
               className="mx-auto block h-auto w-auto max-w-full md:max-h-[85vh]"
             />
           </Reveal>
-        )}
+        ))}
       </div>
 
       {siblings.length > 1 && (
